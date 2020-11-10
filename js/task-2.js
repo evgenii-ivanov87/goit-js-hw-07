@@ -7,3 +7,7 @@ const ingredients = [
   'Приправы',
 ];
 
+const creetCard = (array) => {
+    const listRef = document.createElement('li')
+    listRef.textContent = array.forEche(element) => { element }
+}
