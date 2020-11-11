@@ -17,17 +17,17 @@ const images = [
 ];
 
 const toImgGallery = document.querySelector('#gallery')
-const createImgCard = image => {
+const createImgCard = images => {
     const imgList = document.createElement('li');
-    imgList.classList.add('img-lsit')
+    imgList.classList.add('img-list')
     const toImgList = document.createElement('img');
-    toImgList.classList.add('img-products')
-    toImgList.src = images.url
-    console.log(toImgList.url)
-    toImgList.alt = images.alt
-    imgList.append(toImgList)
-    toImgGallery.append(imgList)
-    return toImgGallery;
+  toImgList.classList.add('img-products')
+  toImgList.src = images.url   
+  toImgList.alt = images.alt    
+  imgList.append(toImgList)    
+    return imgList;
 }
-console.log(images[0])
-console.log(createImgCard(images[0])) 
+ const imgGallery = images.map(image => createImgCard(image))
+toImgGallery.append(...imgGallery)
+
+

@@ -1,0 +1,13 @@
+#gallery {
+  display: flex;
+}
+
+.img-list {
+  margin: 10px;
+}
+
+.img-products {
+  display: block;
+  width: 300px;
+  /* height: 300px; */
+}
