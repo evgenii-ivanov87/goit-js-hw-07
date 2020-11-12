@@ -1,13 +1,18 @@
 const inputRef = document.querySelector('#validation-input')
-console.dir(inputRef)
-console.dir(inputRef.dataset.length)
 
-inputRef.addEventListener('change', event => {
-    console.log(event)
-    console.log(event.target.value.length)
+inputRef.addEventListener('blur', event => {
+ 
+    inputRef.classList.add(event.target.value.length === Number(inputRef.dataset.length) ?
+        'valid' :       
+        'invalid'
+        )
+    })
 
-    if (event.target.value.length !== inputRef.dataset.length)
-    { inputRef.classList.add('invalid') }
-    else  { inputRef.classList.add('valid') } 
-   
-})
+    inputRef.addEventListener('focus', event => {
+ 
+    inputRef.classList.remove(event.target.value.length === Number(inputRef.dataset.length) ?
+        'valid' :       
+        'invalid'
+        )
+    })
+

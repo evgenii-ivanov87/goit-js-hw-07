@@ -14,8 +14,8 @@ function render() {
     counterValue.textContent = value;
 }
 
-const discRef = document.querySelector('.js-decrement')
-const incrRef = document.querySelector('.js-increment')
+const discRef = document.querySelector('button[data-action="decrement"]')
+const incrRef = document.querySelector('button[data-action="increment"]')
 const counterValue = document.querySelector('#value')
 
 
