@@ -1,15 +1,23 @@
-const increment = () =>{
-    value +=1
-} 
+let value = 0;
 
-const decrement = () =>{
-    value -=1
-} 
+function increment()  {
+    value += 1
+    render()
+}
 
-const discRef = document.querySelector('button')
-const incrRef = document.querySelector('button')
-const counterValue  = document.querySelector('#value')
+function decrement()  {
+    value -= 1
+    render()
+}
 
-console.log(discRef)
-console.log(incrRef)
-console.log(counterValue )
+function render() {
+    counterValue.textContent = value;
+}
+
+const discRef = document.querySelector('.js-decrement')
+const incrRef = document.querySelector('.js-increment')
+const counterValue = document.querySelector('#value')
+
+
+incrRef.addEventListener('click', increment)
+discRef.addEventListener('click', decrement)
