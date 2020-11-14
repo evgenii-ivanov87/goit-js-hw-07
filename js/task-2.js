@@ -8,7 +8,7 @@ const ingredients = [
 ];
 
 const dirRef = document.querySelector('#ingredients')
-console.log(dirRef)
+
 
 ingredients.forEach((value) => {
 const listRef = document.createElement('li')

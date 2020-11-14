@@ -1,4 +1,4 @@
-const inputRef = document.querySelector('input')
+const inputRef = document.querySelector('#controls > input')
 const createRef = document.querySelector('button[data-action="render"]')
 const destroyRef = document.querySelector('button[data-action="destroy"]')
 const boxesRef = document.querySelector('#boxes')
