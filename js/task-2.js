@@ -11,9 +11,11 @@ const dirRef = document.querySelector('#ingredients')
 
 
 ingredients.forEach((value) => {
-const listRef = document.createElement('li')
-  listRef.textContent = value
-  return dirRef.append(listRef)
-
+  newList(value)
 })
 
+function newList(value) {
+  const listRef = document.createElement('li')
+  listRef.textContent = value
+  return dirRef.append(listRef)
+}
