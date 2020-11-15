@@ -8,11 +8,8 @@ const ingredients = [
 ];
 
 const dirRef = document.querySelector('#ingredients')
+const appendList = ingredients.map(value => newList(value))
 
-
-ingredients.forEach((value) => {
-  newList(value)
-})
 
 function newList(value) {
   const listRef = document.createElement('li')
