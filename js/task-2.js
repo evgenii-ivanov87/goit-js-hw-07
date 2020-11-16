@@ -7,12 +7,13 @@ const ingredients = [
   'Приправы',
 ];
 
-const dirRef = document.querySelector('#ingredients')
-const appendList = ingredients.map(value => newList(value))
 
+const ulRef = document.querySelector('#ingredients')
+const createList = ingredients.map(value => {
+    const newList = document.createElement('li');
+  newList.textContent = value;
+  
+    return newList;
+})
+  ulRef.append(...createList)
 
-function newList(value) {
-  const listRef = document.createElement('li')
-  listRef.textContent = value
-  return dirRef.append(listRef)
-}
